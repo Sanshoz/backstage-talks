@@ -8,6 +8,16 @@
   border: 0;
 }
 
-.main {
+
+html{
+  scroll-snap-type: y mandatory;
+}
+
+.child {
+  scroll-snap-align: start;
   height: 100vh;
+}
+
+.child img{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
