@@ -18,10 +18,11 @@ const FixedContent = () => {
       }
 
     return (
-        <section className="flex child flex-col fixed inset-0">
+        <section className="flex child flex-col fixed inset-0 invisible md:visible">
+          
             <div className={`grid grid-cols-2 flex  ${setMargin('mt')} ${setMargin('ml')} ${setMargin('mr')}`}>
                 <div className="flex"> FAKE BACKSTAGE </div>
-                <div className='flex justify-end'>fake@backstagetals.com</div>
+                <div className='flex justify-end '>fake@backstagetals.com</div>
             </div>
                 
             
