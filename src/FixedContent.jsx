@@ -1,3 +1,5 @@
+import boxicons from "boxicons"
+
 const FixedContent = (props) => {
     const bgColor = props.bgColor
     const setMargin = (margin) => {
@@ -20,8 +22,8 @@ const FixedContent = (props) => {
         <section className="flex flex-col fixed inset-0 invisible md:visible" >
           
             <div className={`grid grid-cols-2 flex  ${setMargin('mt')} ${setMargin('ml')} ${setMargin('mr')}`}>
-                <div className="flex text-4xl"> FAKE BACKSTAGE </div>
-                <div className='flex justify-end '>fake@backstagetals.com</div>
+                <div className="flex text-4xl"> FAKE magazine </div>
+                <div className='flex justify-end '>kelvykellysson@gmail.com</div>
             </div>
                 
             
@@ -29,9 +31,9 @@ const FixedContent = (props) => {
             <div className={` flex justify-between items-end mt-auto ${setMargin('mt')} ${setMargin('ml')} ${setMargin('mr')}`}>
                 <div className="flex w-1/5">
                   <p>
-                  Backstage Talks is a magazine of casual, but in depth dialogues on design and business. Our decisions shape and influence this complex world—to have a chance to make the right ones, we need to talk.
-                  <br />© 2023 Published by Büro Milk
-                  <br />Privacy Policy
+                  This site is a copy from Backstage Talks design. I tried my best to look similar, but there are some difference, as you can see with the photos.
+                  <br />Changed the images to pictures from some amazing artists.
+                  <br />Feel free to say what do you think about the site and contact me <br /><a href="https://github.com/Sanshoz"><box-icon name='github' type='logo' animation='tada' /></a>
                   </p>
                     </div>
                 <div className=' text-right'>

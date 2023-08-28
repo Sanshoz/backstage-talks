@@ -1,10 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
+
 
 
 
 const ImageComponent = (props) => {
+  const img = props.imgUrl
+  const txtPicture = props.txtPicture
+  const artistName = props.artistName
+  const picture = props.picture
   const color = props.color;
   const issue = props.issue;
   const navigate = useNavigate()
@@ -26,39 +30,38 @@ const ImageComponent = (props) => {
 
   //    const scrollTop = scrollContainerRef.current.scrollTop;
 
-  const navigateTo = (issue) => {
-    console.log("navigateTo")
-    navigate(`/test`)
-} 
 
-const componentRef = useRef(null);
+
 
 
 
   return (
     <div
       className="flex flex-col items-center w-full h-full child justify-center z-10"
-      ref={componentRef}
     >
             <div className="absolute top-0 left-0 mt-4 ml-4 text-xl md:invisible">FAKE BACKSTAGE</div>
-      <div className="book " onClick={()=>navigateTo(issue)}>
+      <div className="book"  style={{height: "500px"}}>
         <img
-          src={`https://placehold.co/400x500/${color.replace('#', '')}/white?text=Hello+World`}
-          className="h-80 md:h-auto cursor-pointer"
+          src={img}
+          className="h-80 md:h-auto w-auto h-auto max-h-[100%]"
           alt="book image"
           
         /> 
       </div>
 
-      <div className="text-center">
+      <div className="text-center w-96">
         Issue #{issue}<br />
-        is sold out. <br />
-        If you are lucky, you may get the last pieces in selected stores.
+        <div className="mb-3 mt-3 text-sm">
+          <div className="text-white text-xl">{picture}</div>
+           {artistName}
+        </div>  
+         
+        {txtPicture}
       </div>
       <p className={`text-center mt-20 mb-2 bottom-0  sm:hidden ${setVisibility(issue)} `}  >
-        Backstage Talks is a magazine of casual, but in depth dialogues on design and business. Our decisions shape and influence this complex world—to have a chance to make the right ones, we need to talk.
-        <br /> <div className="text-xs">© 2023 Published by Büro Milk</div>
-        <br /> <div className="text-xs">Privacy Policy</div>
+        thank you to see my site. I'll do more soon. <br /><a href="https://github.com/Sanshoz"><box-icon name='github' type='logo' animation='tada' /></a>
+        <br /> <div className="text-xs">  </div>
+        <br /> <div className="text-xs">github</div>
       </p>
     </div>
   );
