@@ -1,6 +1,5 @@
-import ImageComponent from "./ImageComponent"
-
-const FixedContent = () => {
+const FixedContent = (props) => {
+    const bgColor = props.bgColor
     const setMargin = (margin) => {
         if(margin === 'mt'){
           return 'mt-5 '
@@ -18,10 +17,10 @@ const FixedContent = () => {
       }
 
     return (
-        <section className="flex child flex-col fixed inset-0 invisible md:visible">
+        <section className="flex flex-col fixed inset-0 invisible md:visible" >
           
             <div className={`grid grid-cols-2 flex  ${setMargin('mt')} ${setMargin('ml')} ${setMargin('mr')}`}>
-                <div className="flex"> FAKE BACKSTAGE </div>
+                <div className="flex text-4xl"> FAKE BACKSTAGE </div>
                 <div className='flex justify-end '>fake@backstagetals.com</div>
             </div>
                 
@@ -35,14 +34,13 @@ const FixedContent = () => {
                   <br />Privacy Policy
                   </p>
                     </div>
-                <div className='flex '>
-                Issue #7 <br />
-                Issue #6 <br />
-                Issue #5 <br />
-                Issue #4 <br />
-                Issue #3 <br />
-                Issue #2 <br />
-                Issue #1
+                <div className=' text-right'>
+                  <div className="links" style={bgColor === "#ff651a"? {fontSize: "1vw"}: {}} >Issue #5</div> 
+                  <div className="links" style={bgColor === "#ffbe00"? {fontSize: "1vw"}: {}} >Issue #4</div> 
+                  <div className="links" style={bgColor === "#e30512"? {fontSize: "1vw"}: {}} >Issue #3</div> 
+                  <div className="links" style={bgColor === "#1d3fbb"? {fontSize: "1vw"}: {}} >Issue #2</div> 
+                  <div className="links" style={bgColor === "#00c1b5"? {fontSize: "1vw"}: {}} >Issue #1</div> 
+      
                 </div>   
             </div>
             

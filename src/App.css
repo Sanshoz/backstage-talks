@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -11,13 +16,37 @@
 
 html{
   scroll-snap-type: y mandatory;
+  
+  
+}
+body {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */
+  -ms-overflow-style: none; /* Oculta a barra de rolagem no Internet Explorer/Edge */
+  font-family: 'Lora', serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0; /* Oculta a barra de rolagem no Chrome e Safari */
+}
+a{
+  display: block;
 }
 
 .child {
   scroll-snap-align: start;
   height: 100vh;
+
 }
 
 .child img{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.links{
+  transition: 0.5s;
+}
+
+.links:hover{
+  text-decoration: underline;
+
 }
