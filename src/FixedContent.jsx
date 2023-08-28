@@ -33,7 +33,7 @@ const FixedContent = (props) => {
                   <p>
                   This site is a copy from Backstage Talks design. I tried my best to look similar, but there are some difference, as you can see with the photos.
                   <br />Changed the images to pictures from some amazing artists.
-                  <br />Feel free to say what do you think about the site and contact me <br /><a href="https://github.com/Sanshoz"><box-icon name='github' type='logo' animation='tada' /></a>
+                  <br />Feel free to say what do you think about the site and contact me <br />
                   </p>
                     </div>
                 <div className=' text-right'>
